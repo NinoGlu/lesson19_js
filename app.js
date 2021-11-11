@@ -19,9 +19,6 @@ const formValidator = (form, fieldsConfig, onValidateSuccess, onValidationError)
       if(rule.type && isNaN(Number(value))){
         fieldValidationResult.errors.push(rule.message);      
       }
-      if(rule.length13 && value.startsWith(`+`) && value.length != 13){
-        fieldValidationResult.errors.push(rule.message);      
-      }
       if(rule.length9 && !value.startsWith(`+`) && value.length != 9){
         fieldValidationResult.errors.push(rule.message);      
       }
